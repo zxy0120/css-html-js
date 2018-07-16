@@ -683,7 +683,7 @@ CSS框模型（Box Model）规定了元素框处理元素 内容、内边框、�
 4)空格 小手移动<br>
 5)ctrl+e 合并图层<br>
 
-## 40.
+## 40.切图
 css 切图：<br>
 css sprite也叫css精灵，css雪碧：是一种css图像合并技术，是将小图标合成大图，再利用背景定位技术，显示需要显示的图片部分<br>
 background: url("../images/menu_sprite.jpg") no-repeat 0 -30px;<br>
@@ -984,7 +984,7 @@ string 使用给定的字符串来代表被修剪的文本。<br>
 </map>
 ```
 
-六、水平居中
+六、水平居中<br>
 1)文本居中 text-align:center<br>
 
 2)inline-block;方式实现<br>
