@@ -1,5 +1,5 @@
-## CSS总结代码
-# 1.css引用方式
+# CSS总结代码
+## 1.css引用方式
 ①内联式
 ```bash
 <style>
@@ -23,14 +23,14 @@
 </style>
 ```
 
-# 2.路径
+## 2.路径
 ```bash
   相对路径：<link href="css/css1.css" rel="stylesheet">
           ../返回上一级目录
   绝对路径：<link href="E:/web Test-43/css/css1.css" rel="stylesheet">
 ```
 
-# 3.表格
+## 3.表格
 colspan 列合并  rowspan 行合并  cellspacing 单元格间距
 ```bash
 <table cellspacing="0"></table>
@@ -81,7 +81,7 @@ table tr td{
 }
 ```
 
-# 4.圆角问题
+## 4.圆角问题
 ```bash
 border-bottom-left-radius: ;
 border-bottom-right-radius: ;
@@ -90,7 +90,7 @@ border-top-right-radius: ;
 border-radius: 10px 0px 0px 10px;
 ```
 
-# 5.伪类：hover--鼠标悬停
+## 5.伪类：hover--鼠标悬停
 ```bash
 table tr:hover{
     background-color: blue;
@@ -103,7 +103,7 @@ table tr th:hover{
 }  --表头悬停
 ```
 
-# 6.表头
+## 6.表头
 ```bash
 <tr>
     <th>t1</th>
@@ -112,7 +112,7 @@ table tr th:hover{
 </tr>
 ```
 
-# 7.表格当中添加表格
+## 7.表格当中添加表格
 ```bash
 <table class="t1">
     <tr><td>
@@ -125,7 +125,7 @@ table tr th:hover{
 </table>
 ```
 
-# 8.透明度：
+## 8.透明度：
 ```bash
 .uname:hover{
     background-color: red;
@@ -133,7 +133,7 @@ table tr th:hover{
 }
 ```
 
-# 9.焦点：
+## 9.焦点：
 ```bash
 .pwd:focus{
     background-color: green;
@@ -141,7 +141,7 @@ table tr th:hover{
 }
 ```
 
-# 10.表单及表单控件
+## 10.表单及表单控件
 action:提交地址  action=""提交当前页
 method:提交方式  get-默认 post-更加安全
 ```bash
@@ -202,7 +202,7 @@ method:提交方式  get-默认 post-更加安全
 </form>
 ```
 
-# 11.外边距
+## 11.外边距
 margin-left margin-right margin-top margin-bottom
      1）元素（盒子）垂直排列，margin上下合并，取最大值。
      2）元素（盒子）水平排列，margin左右累加
@@ -212,7 +212,7 @@ margin:20px 40px;     上下 左右
 margin:20px 180px 200px;   上 左右 下
 margin:20px 700px 80px 100px; 上 右 下 左
 
-# 12.内边距  
+## 12.内边距  
 padding-left padding-right padding-top padding-bottom
 padding 不允许负值
 padding:50px;   四边
@@ -220,19 +220,19 @@ padding:30px 40px;    上下 左右
 padding:20px 20px 40px;   上 左右 下
 padding:20px 40px 20px 40px;    上 右 下 左
 
-# 13.字体加粗
+## 13.字体加粗
 ```bash
 font-weight: border 100~900;
 简写：
 font:italic bolder 20px arial ;   // 简写：20px arial 必写 顺序不能颠倒
 ```
 
-# 14.背景简写
+## 14.背景简写
 ```bash
 background: red url("") no-repeat fixed top;  // 简写 顺序可变
 ```
 
-# 15.字体单位
+## 15.字体单位
 px 像素
 cm 厘米
 pt 磅
@@ -241,7 +241,7 @@ in 英寸
 em 字号倍数，相对于默认字体（父元素或浏览器）
 //pt cm in 200%原基础上放大 50%原基础上缩小 em成倍数放大//
 
-# 16.label固定大小
+## 16.label固定大小
 ```bash
 label{
     width: 100px;
@@ -252,12 +252,12 @@ label{
 <label>user name:</label>
 ```
 
-# 17.表示label标签要绑定的HTML元素,你点击这个标签的时候,所绑定的元素将获取焦点
+## 17.表示label标签要绑定的HTML元素,你点击这个标签的时候,所绑定的元素将获取焦点
 ```bash
 <label for="inp01">email:</label><input type="text" id="inp01">
 ```
 
-# 18.颜色的表示方式
+## 18.颜色的表示方式
   1）颜色名 如red
     color: red;
   2）rgb()  范围0-255 red green blue  黑：rgb(0,0,0) 白：rgb(255,255,255)
@@ -267,28 +267,28 @@ label{
   4）十六进制简写：#223344简写为 #234
     color: #234;
 
-# 19.背景图片定位
+## 19.背景图片定位
 ```bash
 background-position:top right;
 简写：
 background:url("images/1.jpg") no-repeat top right;
 ```
 
-# 20.CSS3 阴影
+## 20.CSS3 阴影
 box-shadow:（inset内阴影，省略为外阴影）水平偏移量，垂直偏移量，阴影模糊度，阴影大小，阴影颜色
 ```bash
 box-shadow: 10px 10px 10px 10px black;         // 外阴影
 box-shadow:inset 10px 10px 10px 10px black;    // 内阴影
 ```
 
-# 21.伪类：被选中（被激活）
+## 21.伪类：被选中（被激活）
 ```bash
 .d01:active{
   background: blue;
 }
 ```
 
-# 22.先隐藏，鼠标悬浮时显示
+## 22.先隐藏，鼠标悬浮时显示
 隐藏的模块必须被包含在悬停的模块里
 ```bash
 .d02{
@@ -302,12 +302,12 @@ box-shadow:inset 10px 10px 10px 10px black;    // 内阴影
 <div class="d01"> <div class="d02"></div></div>
 ```
 
-# 23.行高
+## 23.行高
 ```bash
 line-height:10px;     //行高，与height所设值相同时，文字垂直居中
 ```
 
-# 24.元素
+## 24.元素
 块级元素：与同级元素竖直排列，且左右撑满
           如：div  ul  li  p  dd  dt  dl
 行级元素：与同级元素横向排列，且内容自适应，不会左右撑满
@@ -321,7 +321,7 @@ display: inline;  将当前元素转换为行级元素
 display: inline-block;  行级块元素
 ```
 
-# 25.display 与 visibility区别
+## 25.display 与 visibility区别
 display 不占用空间（后元素补位）   visibility 占用空间（保留原元素空间）
 ```bash
 display: none; //隐藏
@@ -330,7 +330,7 @@ visibility: hidden;  //隐藏
 visibility: visible;  //显示
 ```
 
-# 26.浮动    
+## 26.浮动    
 float:left;
 float:right;
 注意：
@@ -342,7 +342,7 @@ float:right;
   6)清除浮动：clear:both/left/right;
   7)一个div的范围是由它里面的标准流决定的，与里面浮动的内容无关
 
-# 27.绝对定位
+## 27.绝对定位
 position: absolute;  // left right top bottom
 注意：
   1)对定位脱离标准流
@@ -351,7 +351,7 @@ position: absolute;  // left right top bottom
   3)多个元素绝对定位，后面定位的元素的层级会高于前面（覆盖之前的元素）
   4)z-index 设定层级
 
-# 28.相对定位
+## 28.相对定位
 position: relative;  // left right top bottom
 注意：
   1)相对定位不脱离标准流
@@ -359,17 +359,17 @@ position: relative;  // left right top bottom
      //相对定位、绝对定位允许负值
      //相对定位、绝对定位对浮动元素依然有效
 
-# 29.固定定位
+## 29.固定定位
 position: fixed;  left right top bottom
 注意：
    1)固定定位脱离标准流（只有相对定位不脱离标准流）
    2)固定定位元素是以浏览器窗口或其他显示设备窗口为基准进行偏移
    3)固定定位对浮动元素依然有效
 
-# 30.标准流
+## 30.标准流
 position:static; 恢复标准流
 
-# 31.选项卡特效
+## 31.选项卡特效
 ```bash
 <style>
 .tab1_content{
@@ -385,7 +385,7 @@ position:static; 恢复标准流
 </div>
 ```
 
-# 32.列表
+## 32.列表
 ```bash
 // 列表类型:
 list-style-type: circle;  // 空心
@@ -435,7 +435,7 @@ list-style: none;
 </dl>
 ```
 
-# 33.盒子模型
+## 33.盒子模型
 一.
 标准模式（严格模式strictmode）:浏览器按w3c标准解析执行代码
 怪异模式（兼容模式quirkmode）:使用浏览器自己的方式解析执行代码
@@ -469,7 +469,7 @@ outline:不占用空间
 CSS框模型（Box Model）规定了元素框处理元素 内容、内边框、边框、外边框 的方式
 
 
-# 34.html框架   <!--过时-->
+## 34.html框架   <!--过时-->
 ```bash
 <frameset cols="20%,80%"> <!--列-->
     <frame>
@@ -481,7 +481,7 @@ CSS框模型（Box Model）规定了元素框处理元素 内容、内边框、�
 ```
 <frame>定义name 使超链接在定义mane的另一个模块中打开
 
-# 35.内联框架
+## 35.内联框架
 ```bash
 <a href="images/2.jpg" target="if1name">图片1</a>
 <a href="test15.html" target="if1name">网页2</a>
@@ -490,7 +490,7 @@ CSS框模型（Box Model）规定了元素框处理元素 内容、内边框、�
 ```
 两个超链接点击后在名为if1name的内联框架中显示
 
-# 36.<!--固定宽度布局-->
+## 36.<!--固定宽度布局-->
 ```bash
     <style>
         /*1)浮动法*/
@@ -592,7 +592,7 @@ CSS框模型（Box Model）规定了元素框处理元素 内容、内边框、�
 </html>
 ```
 
-# 37.变宽变高布局
+## 37.变宽变高布局
 ```bash
 /*比例法  宽度百分比*/
 .header,.footer{
@@ -615,7 +615,7 @@ CSS框模型（Box Model）规定了元素框处理元素 内容、内边框、�
 }
 ```
 
-# 38.变宽布局
+## 38.变宽布局
 ```bash
 /*单侧变宽布局*/
 /*定位法  --适合高度等高的元素*/
@@ -671,7 +671,7 @@ CSS框模型（Box Model）规定了元素框处理元素 内容、内边框、�
 <div class="side"></div>
 ```
 
-# 39.PS
+## 39.PS
 图片格式：
 1）.JPG：有损压缩，压缩方式是去除冗余的图像和彩色数据（不支持透明）
 2）.bmp：无压缩格式，比较大（支持透明）
@@ -684,7 +684,7 @@ CSS框模型（Box Model）规定了元素框处理元素 内容、内边框、�
 1)ctrl+t 变形   2)ctrl+ + 放大  3)ctrl+ - 缩小   4)空格 小手移动
 5)ctrl+e 合并图层
 
-# 40.
+## 40.
 css 切图：
 css sprite也叫css精灵，css雪碧：是一种css图像合并技术，是将小图标合成大图，再利用背景定位技术，显示需要显示的图片部分
 background: url("../images/menu_sprite.jpg") no-repeat 0 -30px;
@@ -694,7 +694,7 @@ background: url("../images/menu_sprite.jpg") no-repeat 0 -30px;
 background: url("../images/k3.jpg") repeat-x;
 ```
 
-# 41.浏览器兼容性：
+## 41.浏览器兼容性：
 css Hack（黑客）：不同浏览器对css的解析结果不同，会导致相同的css输出页面效果不同，此时需要csshack技术来解决浏览器局部兼容性问题
 css Hack 原理：利用书写顺序和不同浏览器对一些特定书写方法的解析方式不同，而达到不同的效果
 ```bash
@@ -787,14 +787,14 @@ background:url("images/a1.png");
                  _height: 500px;
                  overflow: hidden;
 
-# 42.首字符设置样式
+## 42.首字符设置样式
 ```bash
 .d2:first-letter {
     color: #ff0000;
 }
 ```
 
-# 43.选择器：
+## 43.选择器：
 一、基本选择器
   1、标签（元素）选择器
     div{
@@ -860,7 +860,7 @@ background:url("images/a1.png");
 :first-child
 
 
-# 44.选择器的优先级
+## 44.选择器的优先级
 1)!important 优先级最高（ie7及以上）
 2)行内优先级高于外联和内联
   如果只有外联与内联，则与他们的排列顺序有关
@@ -879,7 +879,7 @@ css权重
  a[title][href] img#img01:hover         0132
  a#a01 img[src][title][class]:active    0142
 
-# 45.小技巧：
+## 45.小技巧：
 一、display: inline  block  inline-block  table  table-cel  none  run-in
     run-in:根据上下文作为内联或块级元素显示
 1)如果 设置display: run-in;的元素 后面是块级元素 则该元素（设置display: run-in;的元素）
@@ -1042,7 +1042,7 @@ css权重
 }
 ```
 
-# 46.垂直居中
+## 46.垂直居中
 1)行高  --单行
 height: 100px;
 line-height: 100px;
@@ -1066,7 +1066,7 @@ display: flex;
 flex-direction:column ;
 justify-content: center;
 
-# 47.水平垂直居中
+## 47.水平垂直居中
 1)宽高固定--定位法
 position: absolute;
 top:50%;
@@ -1082,7 +1082,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 
-# 48.布局头尾固定，中间高度自适应
+## 48.布局头尾固定，中间高度自适应
 ```bash
 <style>
     body{
