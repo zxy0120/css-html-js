@@ -142,8 +142,10 @@ table tr th:hover{
 ```
 
 ## 10.表单及表单控件
-action:提交地址  action=""提交当前页
-method:提交方式  get-默认 post-更加安全
+action:提交地址
+action=""提交当前页
+method:提交方式
+get-默认 post-更加安全
 ```bash
 <form action="" method="post"></form>
 <!--（1）文本输入控件-->
@@ -204,9 +206,9 @@ method:提交方式  get-默认 post-更加安全
 
 ## 11.外边距
 margin-left margin-right margin-top margin-bottom
-     1）元素（盒子）垂直排列，margin上下合并，取最大值。
-     2）元素（盒子）水平排列，margin左右累加
-     margin允许有负值
+    1）元素（盒子）垂直排列，margin上下合并，取最大值。
+    2）元素（盒子）水平排列，margin左右累加
+margin允许有负值
 margin:20px;       四边
 margin:20px 40px;     上下 左右
 margin:20px 180px 200px;   上 左右 下
@@ -258,14 +260,14 @@ label{
 ```
 
 ## 18.颜色的表示方式
-  1）颜色名 如red
-    color: red;
-  2）rgb()  范围0-255 red green blue  黑：rgb(0,0,0) 白：rgb(255,255,255)
-    color: rgb(255,0,0)
-  3）十六进制表示，如#fea230
-    color: #ff0000;
-  4）十六进制简写：#223344简写为 #234
-    color: #234;
+    1）颜色名 如red
+        color: red;
+    2）rgb()  范围0-255 red green blue  黑：rgb(0,0,0) 白：rgb(255,255,255)
+        color: rgb(255,0,0)
+    3）十六进制表示，如#fea230
+        color: #ff0000;
+    4）十六进制简写：#223344简写为 #234
+        color: #234;
 
 ## 19.背景图片定位
 ```bash
@@ -309,11 +311,11 @@ line-height:10px;     //行高，与height所设值相同时，文字垂直居�
 
 ## 24.元素
 块级元素：与同级元素竖直排列，且左右撑满
-          如：div  ul  li  p  dd  dt  dl
+        如：div  ul  li  p  dd  dt  dl
 行级元素：与同级元素横向排列，且内容自适应，不会左右撑满
-          如：span  a  img  input
-              span a：宽高不能改变
-              img input：宽高能改变（特例）
+        如：span  a  img  input
+          span a：宽高不能改变
+          img input：宽高能改变（特例）
 标准流static：css规定的默认的块级元素与行级元素的排列方式
 ```bash
 display: block;  将当前元素转换为块级元素
@@ -322,7 +324,8 @@ display: inline-block;  行级块元素
 ```
 
 ## 25.display 与 visibility区别
-display 不占用空间（后元素补位）   visibility 占用空间（保留原元素空间）
+display 不占用空间（后元素补位）
+visibility 占用空间（保留原元素空间）
 ```bash
 display: none; //隐藏
 display: block;  //显示
