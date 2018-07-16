@@ -1,2 +1,2 @@
-# css-html-js-
-css+html+js基础学习资料，包含jquery
+## 说明
+此项目为css+html+js+jquery基础学习资料，资料为2016年学习时记录，如有问题欢迎提出
