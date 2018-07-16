@@ -47,10 +47,10 @@ table{
      table-layout:fixed;
 }
 ```
-②如何让表格边框为1px
-方法1：用边框的上下左右调整
-方法2：border-collapse:collapse 表格边框合并为单一边框 
-       默认：separate
+②如何让表格边框为1px<br>
+方法1：用边框的上下左右调整<br>
+方法2：border-collapse:collapse 表格边框合并为单一边框<br>
+>>>>>>默认：separate
 ```bash
 <style>
     table{
@@ -142,10 +142,10 @@ table tr th:hover{
 ```
 
 ## 10.表单及表单控件
-action:提交地址
-action=""提交当前页
-method:提交方式
-get-默认 post-更加安全
+action:提交地址<br>
+action=""提交当前页<br>
+method:提交方式<br>
+get-默认 post-更加安全<br>
 ```bash
 <form action="" method="post"></form>
 <!--（1）文本输入控件-->
@@ -205,14 +205,14 @@ get-默认 post-更加安全
 ```
 
 ## 11.外边距
-margin-left margin-right margin-top margin-bottom
-    1）元素（盒子）垂直排列，margin上下合并，取最大值。
-    2）元素（盒子）水平排列，margin左右累加
-margin允许有负值
-margin:20px;       四边
-margin:20px 40px;     上下 左右
-margin:20px 180px 200px;   上 左右 下
-margin:20px 700px 80px 100px; 上 右 下 左
+margin-left margin-right margin-top margin-bottom<br>
+>>>>1）元素（盒子）垂直排列，margin上下合并，取最大值。<br>
+>>>>2）元素（盒子）水平排列，margin左右累加<br>
+margin允许有负值<br>
+margin:20px;       四边<br>
+margin:20px 40px;     上下 左右<br>
+margin:20px 180px 200px;   上 左右 下<br>
+margin:20px 700px 80px 100px; 上 右 下 左<br>
 
 ## 12.内边距  
 padding-left padding-right padding-top padding-bottom
@@ -224,7 +224,7 @@ padding:20px 40px 20px 40px;    上 右 下 左
 
 ## 13.字体加粗
 ```bash
-font-weight: border 100~900;
+font-weight: border or 100~900;
 简写：
 font:italic bolder 20px arial ;   // 简写：20px arial 必写 顺序不能颠倒
 ```
@@ -235,13 +235,13 @@ background: red url("") no-repeat fixed top;  // 简写 顺序可变
 ```
 
 ## 15.字体单位
-px 像素
-cm 厘米
-pt 磅
-in 英寸
-百分比  对默认字体缩放（不同浏览器默认字体不同，默认最小字体也不同）
-em 字号倍数，相对于默认字体（父元素或浏览器）
-//pt cm in 200%原基础上放大 50%原基础上缩小 em成倍数放大//
+px 像素<br>
+cm 厘米<br>
+pt 磅<br>
+in 英寸<br>
+百分比  对默认字体缩放（不同浏览器默认字体不同，默认最小字体也不同）<br>
+em 字号倍数，相对于默认字体（父元素或浏览器）<br>
+//pt cm in 200%原基础上放大 50%原基础上缩小 em成倍数放大//<br>
 
 ## 16.label固定大小
 ```bash
@@ -260,14 +260,14 @@ label{
 ```
 
 ## 18.颜色的表示方式
-    1）颜色名 如red
-        color: red;
-    2）rgb()  范围0-255 red green blue  黑：rgb(0,0,0) 白：rgb(255,255,255)
-        color: rgb(255,0,0)
-    3）十六进制表示，如#fea230
-        color: #ff0000;
-    4）十六进制简写：#223344简写为 #234
-        color: #234;
+1）颜色名 如red<br>
+>>>>color: red;<br>
+2）rgb()  范围0-255 red green blue  黑：rgb(0,0,0) 白：rgb(255,255,255)<br>
+>>>>color: rgb(255,0,0)<br>
+3）十六进制表示，如#fea230<br>
+>>>>color: #ff0000;<br>
+4）十六进制简写：#223344简写为 #234<br>
+>>>>color: #234;<br>
 
 ## 19.背景图片定位
 ```bash
@@ -310,13 +310,13 @@ line-height:10px;     //行高，与height所设值相同时，文字垂直居�
 ```
 
 ## 24.元素
-块级元素：与同级元素竖直排列，且左右撑满
-        如：div  ul  li  p  dd  dt  dl
-行级元素：与同级元素横向排列，且内容自适应，不会左右撑满
-        如：span  a  img  input
-          span a：宽高不能改变
-          img input：宽高能改变（特例）
-标准流static：css规定的默认的块级元素与行级元素的排列方式
+块级元素：与同级元素竖直排列，且左右撑满<br>
+>>>>>>>>如：div  ul  li  p  dd  dt  dl<br>
+行级元素：与同级元素横向排列，且内容自适应，不会左右撑满<br>
+>>>>>>>>如：span  a  img  input<br>
+>>>>>>>>>>>>span a：宽高不能改变<br>
+>>>>>>>>>>>>img input：宽高能改变（特例）<br>
+标准流static：css规定的默认的块级元素与行级元素的排列方式<br>
 ```bash
 display: block;  将当前元素转换为块级元素
 display: inline;  将当前元素转换为行级元素
