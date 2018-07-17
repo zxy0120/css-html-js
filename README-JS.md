@@ -9,18 +9,18 @@ a--97<br>
 <input type="text" id="inp01"><br><br>
 <div id="id01" style="width:100px;height:100px;background:red;position:absolute">hi....</div>
 <script>
-    //DOM
-    //var 定义变量
-    var v1=document.getElementById("id01");//查找元素
+    # DOM
+    # var 定义变量
+    var v1=document.getElementById("id01");  # 查找元素
 
-    //事件处理--点击
+    # 事件处理--点击
     v1.onclick=function(){
         alert("hello world!");
     }
 
-    //键盘事件
+    # 键盘事件
     var v2=document.getElementById("inp01");
-    /*键盘按下触发*/
+    # 键盘按下触发
     v2.onkeydown=function(e){
         alert(e.keyCode);
         if(e.keyCode==39){
@@ -62,7 +62,7 @@ async:异步脚本，该属性的目的是不让页面等待脚本下载完后�
 </script>
 ```
 
-## 5.数据类型<br>
+## 5.数据类型
 一、数值型<br>
 ```bash
 var v1=12;
@@ -79,7 +79,7 @@ var alert(Number.MIN_VALUE);
 var alert(Number.MAX_VALUE);  # 超出该最大值，infinity 正无穷 正数超出范围
 ```
 
-二、<br>
+二、提示框<br>
 ```bash
 var v1=prompt("请输入年龄");  # 输入提示框
 alert(v1);  # 消息提示框
@@ -136,18 +136,19 @@ var v26=Number('0.2e-5'); # 0.000002
   4.忽略字符前面的空格<br>
 ```bash
 # 其他进制转十进制：
-# var v1=parseInt(25,16); 37
-# var v1=parseInt('25',16); 37
-# var v1=parseInt(25,8); 21
-# var v1=parseInt('25',8); 21
-# var v1=parseInt(1100,2);12
-# var v1=parseInt('1100',2);12
-# var v1=parseInt(25,10);25
-# var v1=parseInt('25',10);25
+var v1=parseInt(25,16);  # 37
+var v1=parseInt('25',16);  # 37
+var v1=parseInt(25,8);  # 21
+var v1=parseInt('25',8);  # 21
+var v1=parseInt(1100,2);  # 12
+var v1=parseInt('1100',2);  # 12
+var v1=parseInt(25,10);  # 25
+var v1=parseInt('25',10);  # 25
 
 # var v1=parseInt('073');
 # ie低版本 59   ie6、7 ECMAScript 3
 # 高级浏览器 73         ECMAScript 5
+
 var v1=parseInt(12);  # 12
 var v1=parseInt("12");  # 12
 var v1=parseInt("-12");  # -12
@@ -312,17 +313,19 @@ if((a+b) == 0.3){
 
 ## 9.
 一、null<br>
-Number(null)---0<br>
-Number(undefined)---NaN<br>
-Number(NaN)---NaN<br>
-alert(null*8)---0;<br>
+Number(null)  //0<br>
+Number(undefined)  //NaN<br>
+Number(NaN)  //NaN<br>
+alert(null*8)  //0;<br>
+
 二、NaN<br>
 （1）任何涉及NaN的操作，都会返回NaN<br>
 （2）NaN与任何值都不相等，包括本身<br>
-alert(NaN*5)---NaN<br>
-alert(NaN+5)---NaN<br>
-alert(NaN/8)---NaN<br>
-alert(Nan==NaN);---false<br>
+alert(NaN*5)  //NaN<br>
+alert(NaN+5)  //NaN<br>
+alert(NaN/8)  //NaN<br>
+alert(Nan==NaN);  //false<br>
+
 （3）isNaN()判断是否为非数值<br>
 任何不能被转换为数值的值都会返回true<br>
 ```bash
@@ -339,15 +342,16 @@ isNaN('hello');  # true
 isNaN(true);  # false
 isNaN(false );  # false
 ```
-（4）alert(0/0)---NaN<br>
-（5）alert("hello"*3);---NaN<br>
+（4）alert(0/0)  //NaN<br>
+（5）alert("hello"*3);  //NaN<br>
+
 三、<br>
 （1）<br>
-'23'+9 ---239 + 字符串的连接符<br>
-'23'*2 ---46  * 隐示转换<br>
+'23' + 9   //239  + 字符串的连接符<br>
+'23' * 2   //46  * 隐示转换<br>
 （2）<br>
-34/0 ---infinity     正无穷<br>
--34/0 --- -infinity    负无穷<br>
+34/0   //infinity     正无穷<br>
+-34/0  //-infinity    负无穷<br>
 四、isFinite();判断是否为无穷   Finite--有穷<br>
 ```bash
 if(isFinite(34/0)){
@@ -357,7 +361,7 @@ if(isFinite(34/0)){
 }
 ```
 
-## 10.包装类型      new Number()此Number非彼Number()
+## 10.包装类型    new Number()此Number非彼Number()
 ```bash
 var a=10;
 a1=new Number(10);  # new Number()定义object（对象）
@@ -366,7 +370,7 @@ alert(typeof a);  # number
 alert(typeof a1);  # sobject
 ```
 
-## 11.
+## 11.数字格式
 toFixed：保留几位小数，自动四舍五入<br>
 toExponential：科学计数法<br>
 toPrecision：即可返回固定大小的格式，也可返回指数（e）格式，自动匹配规则<br>
@@ -401,7 +405,7 @@ v2.toString(16);  # 17
 （3）转义字符<br>
  \'<br>
  \"<br>
- \\<br>
+ \ \<br>
  部分转义字符在输出为html文本时不会发生作用<br>
  \n回车换行<br>
  \r回车<br>
@@ -558,8 +562,7 @@ return<br>
 break 立即跳出循环<br>
 continue 停止当前循环 进入下一次循环<br>
 
-## 14.
-三、布尔型Boolean()<br>
+## 14.布尔型Boolean()
 true false 小写<br>
 1)其他类型转为布尔型：<br>
 ____________true_______false<br>
@@ -616,8 +619,7 @@ var v2=v1&&true;
 alert(v2);  # false
 ```
 
-## 15.
-四、undefined<br>
+## 15.undefined
 表示变量被声明 但没有被赋值<br>
 ```bash
 var a;
@@ -625,16 +627,14 @@ alert(a);  # undefined
 alert(typeof a);  # undefined
 ```
 
-## 16.
-五、null 空类型<br>
+## 16.null 空类型
 ```bash
 var v1=null;
 alert(typeof v1);  # object
 alert(undefined==null);  # true  原因：undefined派生自null
 ```
 
-## 17.
-六、object<br>
+## 17.object
 typeof:<br>
 ```bash
 alert(typeof(1));  # number
@@ -653,7 +653,7 @@ alert(typeof(Date));  # function
 alert(typeof(function fun1(){}));  # function
 ```
 
-## 18.内置对象<br>
+## 18.内置对象
 1)数学对象--Math<br>
 ```bash
 var v1=-23;
@@ -1351,7 +1351,7 @@ var arr2=[11,22,33];
 document.write(arr1.concat(arr2));
 ```
 
-4）slice() 提取一段数组并返回一个新的数组。<br>
+4）slice() --提取一段数组并返回一个新的数组。<br>
 ```bash
 var arr = ["George","John","Thomas"];
 document.write(arr + "<br>");
@@ -1359,7 +1359,7 @@ document.write(arr.slice(0,1) + "<br>");
 document.write(arr.slice(1));
 ```
 
-5）splice() 改变数组的内容,添加新的元素,删除旧的元素。<br>
+5）splice() --改变数组的内容,添加新的元素,删除旧的元素。<br>
 ```bash
 var arr = ["George","John","Thomas","James","Adrew","Martin"];
 document.write(arr + "<br>");
