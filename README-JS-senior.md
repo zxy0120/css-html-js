@@ -244,53 +244,53 @@ document.write(navigator.mimeTypes[i].enabledPlugin.name+"<br>");  # 对该类�
 ```
 
 ## 6、历史：
-* 1、1993 美国NCSA国家计算机中心发布   Mosaic<br>
-* 2、Netscape 介入浏览器领域 ，Mozilla (Mosaic killer 的简写)<br>
-*     Mozilla/版本号[语言][平台；加密]......<br>
-* 3、微软 发布第一个浏览器 internet Explorer 3<br>
-*    Mozilla/2.0(compatible...........)<br>
-*
-* 浏览器内核：<br>
-* 也叫排版引擎或渲染引擎，主要功能是提取网页的内容（html\xml\图像等）<br>
-* 整理信息--加入css，js，计算网页的显示方式，输出到显示器或打印机上<br>
-*
-* 1、Trident--ie内核<br>
-*    html引擎：Trident<br>
-*    js引擎：低版本：JScript<br>
-*            高版本：chakra 查克拉<br>
-*
-* 2、Gecko --火狐内核<br>
-*    html引擎：Gecko<br>
-*    js引擎：低版本：SpiderMonkey<br>
-*            高版本: JagerMonkey<br>
-*
-* 3、webkit--苹果开源内核，基于该内核的浏览器主要用于移动safari chrome<br>
-*    html引擎：KHTML<br>
-*    js引擎：safari: 低版本：javascript core<br>
-*                    高版本: Nitro<br>
-*            chrome: v8<br>
-*
-* 4、presto--opera早期内核<br>
-* 5、blink-- 是webkit分支，早期opera/chrome内核<br>
-*
-* 6、konqueror--只能在Linux使用的内核<br>
+1)1993 美国NCSA国家计算机中心发布   Mosaic<br>
+2)Netscape 介入浏览器领域 ，Mozilla (Mosaic killer 的简写)<br>
+    Mozilla/版本号[语言][平台；加密]......<br>
+3)微软 发布第一个浏览器 internet Explorer 3<br>
+    Mozilla/2.0(compatible...........)<br>
+
+浏览器内核：<br>
+也叫排版引擎或渲染引擎，主要功能是提取网页的内容（html\xml\图像等）<br>
+整理信息--加入css，js，计算网页的显示方式，输出到显示器或打印机上<br>
+
+1)Trident--ie内核<br>
+   html引擎：Trident<br>
+   js引擎：低版本：JScript<br>
+           高版本：chakra 查克拉<br>
+
+2)Gecko --火狐内核<br>
+   html引擎：Gecko<br>
+   js引擎：低版本：SpiderMonkey<br>
+           高版本: JagerMonkey<br>
+
+3)webkit--苹果开源内核，基于该内核的浏览器主要用于移动safari chrome<br>
+   html引擎：KHTML<br>
+   js引擎：safari: 低版本：javascript core<br>
+                   高版本: Nitro<br>
+           chrome: v8<br>
+
+4)presto--opera早期内核<br>
+5)blink-- 是webkit分支，早期opera/chrome内核<br>
+
+6)konqueror--只能在Linux使用的内核<br>
 
 ## 7、DOM：文档对象模型   document object Model
-* 每个节点都有一个childNodes集合属性<br>
-* 节点属性：<br>
-* node.nodeName 获取节点名称<br>
-* node.nodeType 节点类型<br>
-* -- 元素节点  返回1<br>
-* -- 文本节点  返回3<br>
-* node.nodeValue 节点值<br>
-* -- 元素节点  返回 null<br>
-* -- 文本节点  返回文本内容<br>
-*
-* 判断指定节点是否有子节点：<br>
-* node.hasChildNodes  true有  false无<br>
-*
-* 删除子节点：<br>
-* p.removeChild(子节点)<br>
+每个节点都有一个childNodes集合属性<br>
+节点属性：<br>
+node.nodeName 获取节点名称<br>
+node.nodeType 节点类型<br>
+-- 元素节点  返回1<br>
+-- 文本节点  返回3<br>
+node.nodeValue 节点值<br>
+-- 元素节点  返回 null<br>
+-- 文本节点  返回文本内容<br>
+
+判断指定节点是否有子节点：<br>
+node.hasChildNodes  true有  false无<br>
+
+删除子节点：<br>
+p.removeChild(子节点)<br>
 ```bash
 window.onload=function(){
     alert(document.childNodes[1]);//object DocumentType
@@ -380,49 +380,49 @@ HTMLElement.prototype.first_child=function(){
 ## 9、元素
 ```bash
 window.onload=function(){
-# 元素查找
-# 1、getElementById("id01")   按id查找
-# 2、getElementByTagName("div")  按标签查找，返回数组
-# 3、document.getElementsByClassName("d1");按class属性查找，返回数组
-# 4、getElementsByName("r1") 按name查找，返回数组
-#
-# 属性设置:
-# setAttribute（属性名，属性值） 设置属性
-# this.className="c1"
-# this.title="c1"
-#
-# getAttribute（属性名）         获取属性
-#
-# removeAttribute（属性名）      删除属性
-# his.className=null
-
-document.getElementById("id01");
-
-var v1=document.getElementsByTagName("div");
-var v2=document.getElementsByClassName("d1");
-v2[1].style.color="red";
-
-var v3=document.getElementById("id02").getElementsByClassName("d1");
-
-var v4=document.getElementsByName("r1");
-for(var i = 0;i < v4.length;i ++){
-    v4[i].style.backgroundColor="red";
-}
-
-document.getElementById("id01").setAttribute("title","hello.....");
-alert(document.getElementById("id01").getAttribute("class"));
-
-# 鼠标悬停添加属性，鼠标移出去掉属性
-document.getElementById("id01").onmouseover=function(){
-      this.setAttribute("class","c1");  # <div class="c1">
-      this.className="c1";  # 设置属性
-      this.title="c1";
-      alert(this.id);  # 获取属性
-};
-document.getElementById("id01").onmouseout=function(){
-      this.removeAttribute("class");
-      this.className=null;  # 移除属性
-};
+    # 元素查找
+    # 1、getElementById("id01")   按id查找
+    # 2、getElementByTagName("div")  按标签查找，返回数组
+    # 3、document.getElementsByClassName("d1");按class属性查找，返回数组
+    # 4、getElementsByName("r1") 按name查找，返回数组
+    #
+    # 属性设置:
+    # setAttribute（属性名，属性值） 设置属性
+    # this.className="c1"
+    # this.title="c1"
+    #
+    # getAttribute（属性名）         获取属性
+    #
+    # removeAttribute（属性名）      删除属性
+    # his.className=null
+    
+    document.getElementById("id01");
+    
+    var v1=document.getElementsByTagName("div");
+    var v2=document.getElementsByClassName("d1");
+    v2[1].style.color="red";
+    
+    var v3=document.getElementById("id02").getElementsByClassName("d1");
+    
+    var v4=document.getElementsByName("r1");
+    for(var i = 0;i < v4.length;i ++){
+        v4[i].style.backgroundColor="red";
+    }
+    
+    document.getElementById("id01").setAttribute("title","hello.....");
+    alert(document.getElementById("id01").getAttribute("class"));
+    
+    # 鼠标悬停添加属性，鼠标移出去掉属性
+    document.getElementById("id01").onmouseover=function(){
+        this.setAttribute("class","c1");  # <div class="c1">
+        this.className="c1";  # 设置属性
+        this.title="c1";
+        alert(this.id);  # 获取属性
+    };
+    document.getElementById("id01").onmouseout=function(){
+        this.removeAttribute("class");
+        this.className=null;  # 移除属性
+    };
 }
 ```
 
@@ -773,39 +773,39 @@ function fun1(){
 6）页面加载完毕<br>
 
 ## 14、事件处理
-* 1、事件的传播过程<br>
-* div(hello)->div->body->html  冒泡事件流<br>
-* html->body->div->div(hello)  捕获事件流<br>
-*   冒泡事件流：<br>
-*   指事件由下至上传播，传播过程像气泡一样，不断上升到顶端，所有叫冒泡事件流<br>
-*   捕获事件流：<br>
-*   捕获事件与冒泡事件流相反，由上至下传播，由开发人员制定<br>
-*   1）默认情况，事件使用冒泡事件流<br>
-*   2）ie8及以下版本只支持冒泡事件流<br>
-*   3）ie9及以上版本、现在高级浏览器同时支持以上两种事件流<br>
-* 2、事件模型<br>
-* dom0->dom1->dom2<br>
-* （1）dom0事件模型<br>
-*  < div onclick="fun1()">hello< /div ><br>
-*  document.getElementById("id01").onmouseover=function(){....};<br>
-*  【1】该方式不支持对同一元素的同一事件注册多个事件监听<br>
-*  【2】该方式只支持冒泡事件传播<br>
-*
-* （2）dom2事件模型（ie8及其以下版本不支持）<br>
-*     1）addEventListener(arg1,arg2,arg3)<br>
-*     arg1:要绑定的事件类型<br>
-*     arg2:回调方式<br>
-*     arg3:事件的传播方式<br>
-*         true:事件捕获<br>
-*         false:事件冒泡<br>
-*    2）removeEventListener（参数同上）<br>
-*    移出事件可释放系统资源<br>
-*    移出事件的参数一定要与绑定事件参数一致<br>
-* （3）IE事件模型  ie8以下 有多个输出时从后到前<br>
-*     attachEvent(arg1,arg2)<br>
-*         arg1:要绑定事件的类型<br>
-*          arg2:回调函数<br>
-*     detachEvent(参数同上) 移出事件<br>
+1、事件的传播过程<br>
+div(hello)->div->body->html  冒泡事件流<br>
+html->body->div->div(hello)  捕获事件流<br>
+  冒泡事件流：<br>
+  指事件由下至上传播，传播过程像气泡一样，不断上升到顶端，所有叫冒泡事件流<br>
+  捕获事件流：<br>
+  捕获事件与冒泡事件流相反，由上至下传播，由开发人员制定<br>
+  1）默认情况，事件使用冒泡事件流<br>
+  2）ie8及以下版本只支持冒泡事件流<br>
+  3）ie9及以上版本、现在高级浏览器同时支持以上两种事件流<br>
+2、事件模型<br>
+dom0->dom1->dom2<br>
+（1）dom0事件模型<br>
+ < div onclick="fun1()">hello< /div ><br>
+ document.getElementById("id01").onmouseover=function(){....};<br>
+ 【1】该方式不支持对同一元素的同一事件注册多个事件监听<br>
+ 【2】该方式只支持冒泡事件传播<br>
+
+（2）dom2事件模型（ie8及其以下版本不支持）<br>
+    1）addEventListener(arg1,arg2,arg3)<br>
+    arg1:要绑定的事件类型<br>
+    arg2:回调方式<br>
+    arg3:事件的传播方式<br>
+        true:事件捕获<br>
+        false:事件冒泡<br>
+   2）removeEventListener（参数同上）<br>
+   移出事件可释放系统资源<br>
+   移出事件的参数一定要与绑定事件参数一致<br>
+（3）IE事件模型  ie8以下 有多个输出时从后到前<br>
+    attachEvent(arg1,arg2)<br>
+        arg1:要绑定事件的类型<br>
+         arg2:回调函数<br>
+    detachEvent(参数同上) 移出事件<br>
 ```bash
 window.onload=function(){
     document.getElementById("id01").attachEvent("onclick",function(){
@@ -827,10 +827,10 @@ window.onload=function(){
 <button onclick="fun2()">确定</button>
 ```
 
-* 3、键盘事件<br>
-* onkeydown  键盘按下某个键时触发，不区分大小写（字母键都以大写方式显示）<br>
-* onkeyup    释放某个键时触发，不区分大小写（字母键都以大写方式显示）<br>
-* onkeypress  按下某个键并释放时触发，区分大小写（字母键都以大、小写方式显示）<br>
+3、键盘事件<br>
+onkeydown  键盘按下某个键时触发，不区分大小写（字母键都以大写方式显示）<br>
+onkeyup    释放某个键时触发，不区分大小写（字母键都以大写方式显示）<br>
+onkeypress  按下某个键并释放时触发，区分大小写（字母键都以大、小写方式显示）<br>
 
 ## 15、addEventListener
 ```bash
@@ -906,10 +906,10 @@ window.onload=function(){
 ```
 
 ## 16、执行顺序
-等待文档加载完毕之后就执行，不包括图片等(DOM)<br>
-$(function(){});<br>
-等待文档、图片等加载完毕之后执行<br>
-window.onload=function(){}<br>
+1)等待文档加载完毕之后就执行，不包括图片等(DOM)<br>
+  $(function(){});<br>
+2)等待文档、图片等加载完毕之后执行<br>
+  window.onload=function(){}<br>
 ```bash
 window.onload=function(){
     # mouseover:鼠标指针穿过被选元素与子元素触发  支持冒泡
@@ -1019,14 +1019,14 @@ window.onload=function(){
 ```
 
 ## 18、阻止默认动作/冒泡
-* 阻止浏览器默认动作：<br>
-* 1、return false;  表示退出执行，其之后所有代码不会被执行，在行内阻止默认行为<br>
-* 2、e.preventDefault(); 阻止浏览器默认动作,其之后所有代码会被执行<br>
-*   e.returnValue=false;  ie低版本<br>
-*
-* 阻止冒泡传播事件：<br>
-* e.stopPropagation；<br>
-* e.cancelBubble=true;ie低版本<br>
+阻止浏览器默认动作：<br>
+1、return false;  表示退出执行，其之后所有代码不会被执行，在行内阻止默认行为<br>
+2、e.preventDefault(); 阻止浏览器默认动作,其之后所有代码会被执行<br>
+  e.returnValue=false;  ie低版本<br>
+
+阻止冒泡传播事件：<br>
+e.stopPropagation；<br>
+e.cancelBubble=true;ie低版本<br>
 ```bash
 window.onload=function(){
     document.getElementById("a1").onclick=function(event){
@@ -1159,9 +1159,9 @@ window.onload=function(){
 ```
 
 ## 20、事件代理
-* 事件代理：又叫事件委托，事件委派，即将事件处理加载到父级元素上，可避免将事件处理添加到多个子级元素上。<br>
-* 涉及特性：事件冒泡和目标元素<br>
-* 优点：1、提高性能；2、对于新增的子元素，前面的事件依然有效<br>
+事件代理：又叫事件委托，事件委派，即将事件处理加载到父级元素上，可避免将事件处理添加到多个子级元素上。<br>
+涉及特性：事件冒泡和目标元素<br>
+优点：1、提高性能；2、对于新增的子元素，前面的事件依然有效<br>
 ```bash
  window.onload=function(){
     # 1
@@ -1251,29 +1251,29 @@ window.onload=function(){
 
 ## 22、移动端
 < meta charset="UTF-8" ><br>
-<!-- viewport:可视区域，视口； user-scalable=no 用户不可以手动缩放 --><br>
+// viewport:可视区域，视口； user-scalable=no 用户不可以手动缩放<br>
 < meta name="viewport" content="initial-scale=1.0;user-scalable=no" ><br>
 
-* 触摸事件--html5移动端<br>
-*
-* 方法：<br>
-* ontouchstart：当手指触摸屏幕时触发，即使已经有一个手指放到屏幕了也会触发<br>
-* ontouchmove：当手指在屏幕上滑动时连续触发<br>
-* ontouchend：当手指从屏幕上离开时触发<br>
-*
-* 属性：<br>
-* touches：表示当前跟踪的触摸操作touch对象的数组（几个手指头）<br>
-* changedTouches：表示自上次触摸以来发生了改变的touch对象数组<br>
-*
-* 注意：手指在活动屏幕时，浏览器会有默认行为，如缩放和滚动，可用来禁止event.preventDefault();<br>
-*
-* 手势事件：<br>
-* gesturestart：当一个手指按在屏幕上，另一个手指触摸屏幕时触发<br>
-* gesturechange：当触摸屏幕的任何一个手指发生变化时触发<br>
-* gestureend：当任何一个手指从屏幕上移开时触发<br>
-*
-* 屏幕旋转事件：<br>
-* onorientationchange<br>
+触摸事件--html5移动端<br>
+
+方法：<br>
+ontouchstart：当手指触摸屏幕时触发，即使已经有一个手指放到屏幕了也会触发<br>
+ontouchmove：当手指在屏幕上滑动时连续触发<br>
+ontouchend：当手指从屏幕上离开时触发<br>
+
+属性：<br>
+touches：表示当前跟踪的触摸操作touch对象的数组（几个手指头）<br>
+changedTouches：表示自上次触摸以来发生了改变的touch对象数组<br>
+
+注意：手指在活动屏幕时，浏览器会有默认行为，如缩放和滚动，可用来禁止event.preventDefault();<br>
+
+手势事件：<br>
+gesturestart：当一个手指按在屏幕上，另一个手指触摸屏幕时触发<br>
+gesturechange：当触摸屏幕的任何一个手指发生变化时触发<br>
+gestureend：当任何一个手指从屏幕上移开时触发<br>
+
+屏幕旋转事件：<br>
+onorientationchange<br>
 
 ```bash
 window.onload=function(){
@@ -1901,13 +1901,13 @@ alert(f3());
 ```
 
 ## 28、apply 与 call
-* 1、apply 和 call都可以“扩充函数赖以生存的作用域”<br>
-*    即能改变函数内部指针的指向，从而实现属性方法的继承<br>
-*    改变函数体中this对象的指向<br>
-* 2、将函数绑定到另外一个对象上去运行<br>
-* 3、apply与call的区别就是传递参数的方式不同<br>
-*    call：参数分开传递<br>
-*    apply：参数以数组或arguments参数对象的形式传递<br>
+1、apply 和 call都可以“扩充函数赖以生存的作用域”<br>
+   即能改变函数内部指针的指向，从而实现属性方法的继承<br>
+   改变函数体中this对象的指向<br>
+2、将函数绑定到另外一个对象上去运行<br>
+3、apply与call的区别就是传递参数的方式不同<br>
+   call：参数分开传递<br>
+   apply：参数以数组或arguments参数对象的形式传递<br>
 
 ```bash
 # 1
@@ -1975,16 +1975,16 @@ alert(s.name+"  "+ s.age+"  "+ s.grade);
 ```
 
 ## 29、闭包（closure）
-* js链式作用域，子对象会一级一级向上寻找父对象变量，直到找到为止<br>
-* 所以，父对象的所有变量对子对象是可见的，而子对象对父对象是不可见的<br>
-*
-* 解决：闭包<br>
-* 1、闭包就是能够读取其他函数内部变量的函数<br>
-* 2、闭包是定义在一个函数内部的函数<br>
-* 3、闭包就是将函数内部与函数外部连接起来的桥梁<br>
-*
-* 特点：变量始终保存在内存中<br>
-* 确定：由于闭包会使用函数中的变量保存在内存中，内存消耗大，要慎用，避免造成性能问题<br>
+js链式作用域，子对象会一级一级向上寻找父对象变量，直到找到为止<br>
+所以，父对象的所有变量对子对象是可见的，而子对象对父对象是不可见的<br>
+
+解决：闭包<br>
+1)闭包就是能够读取其他函数内部变量的函数<br>
+2)闭包是定义在一个函数内部的函数<br>
+3)闭包就是将函数内部与函数外部连接起来的桥梁<br>
+
+特点：变量始终保存在内存中<br>
+确定：由于闭包会使用函数中的变量保存在内存中，内存消耗大，要慎用，避免造成性能问题<br>
 ```bash
 var v1=10;
 function f1(){
@@ -2083,10 +2083,10 @@ person.say();
 ```
 
 3、构造函数方式<br>
-* 1、构造函数一般首字母大写，用来与普通函数进行区别<br>
-* 2、一般通过this来指定构造函数成员<br>
-* 3、构造函数由new进行创建<br>
-* 4、构造函数一般情况下没有返回值，如果构造函数返回的是一个对象，则返回的对象会覆盖构造函数的对象<br>
+ 1)构造函数一般首字母大写，用来与普通函数进行区别<br>
+ 2)一般通过this来指定构造函数成员<br>
+ 3)构造函数由new进行创建<br>
+ 4)构造函数一般情况下没有返回值，如果构造函数返回的是一个对象，则返回的对象会覆盖构造函数的对象<br>
 ```bash
 function Person(){
     this.name='zs';
@@ -2465,11 +2465,11 @@ function fun2(){
 ```
 
 ## 36、js跨域
-* 同源策略：阻止从一个域上加载脚本获取或操作另一个域上的文档属性，意味着浏览器隔离来自不同源的内容，防止他们之间的操作<br>
-* 
-* jsonp:json with padding 非官方协议<br>
-*  1、它能够通过在当前文档（客户端）中生成脚本标记< script >标签，来调用跨域脚本（服务器脚本文件）时使用的约定<br>
-*  2、jsonp是一种可以绕狗同源策略的方法，从任何服务端直接返回可执行的，js函数调用或js对象<br>
+同源策略：阻止从一个域上加载脚本获取或操作另一个域上的文档属性，意味着浏览器隔离来自不同源的内容，防止他们之间的操作<br>
+
+jsonp:json with padding 非官方协议<br>
+ 1、它能够通过在当前文档（客户端）中生成脚本标记< script >标签，来调用跨域脚本（服务器脚本文件）时使用的约定<br>
+ 2、jsonp是一种可以绕狗同源策略的方法，从任何服务端直接返回可执行的，js函数调用或js对象<br>
 ```bash
 <div id="show"></div>
 
